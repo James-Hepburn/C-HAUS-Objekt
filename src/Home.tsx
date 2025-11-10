@@ -191,6 +191,16 @@ export default function Home() {
             )
           }
         />
+
+        {isLightboxOpen && (
+          <div className="lightbox-overlay" onClick={() => setIsLightboxOpen(false)}>
+            <img
+              src={images[currentIndex]}
+              alt={`Work ${currentIndex + 1}`}
+              className="lightbox-image"
+            />
+          </div>
+        )}
       </main>
 
       {/* Footer Component */}
