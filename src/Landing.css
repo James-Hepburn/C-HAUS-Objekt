@@ -1,0 +1,144 @@
+:root {
+  --pantone-7527: #cdc6b9;
+  --pantone-571: #a7d3cf;
+  --font-primary: 'Area', 'Helvetica Neue', sans-serif;
+}
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, var(--pantone-7527), var(--pantone-571));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.landing-gradient {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, var(--pantone-7527), var(--pantone-571));
+  z-index: 0;         
+  opacity: 1;
+}
+
+.landing-bg {
+  position: fixed;
+  inset: 0;
+  background: url('/zebra_print_background.jpg') center/cover no-repeat;
+  mix-blend-mode: multiply; 
+  z-index: 1;
+  opacity: 0;
+}
+
+.gift {
+  position: relative;
+  width: 520px;
+  height: 380px;
+  margin: 100px 0 2rem;
+  z-index: 100;
+}
+
+.gift-lid,
+.gift-base {
+  position: absolute;
+  left: 0;
+  background: black;
+  border: 2px solid #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift-lid {
+  width: 560px;
+  height: 130px;
+  top: 0;
+  left: -20px;
+}
+
+.company-name {
+  font-family: var(--font-primary);
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0;
+  position: absolute;       
+  transform: translateX(-50%); 
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2px;
+  pointer-events: none;
+  color: #fffdf2;
+  text-shadow:
+    0 0 10px rgba(212, 175, 55, 0.8),
+    0 0 25px rgba(255, 220, 120, 0.9),
+    0 0 35px rgba(255, 255, 255, 0.4);
+  animation: nameGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes nameGlow {
+  0% {
+    text-shadow:
+      0 0 8px rgba(212, 175, 55, 0.8),
+      0 0 18px rgba(255, 220, 120, 0.6),
+      0 0 28px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    text-shadow:
+      0 0 15px rgba(212, 175, 55, 0.9),
+      0 0 35px rgba(255, 220, 120, 0.9),
+      0 0 50px rgba(255, 255, 255, 0.6);
+  }
+}
+
+.gift-base {
+  bottom: 0;
+  width: 520px;
+  height: 280px;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+}
+
+.motto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Tondu Beta', sans-serif;
+  font-weight: 700;
+  color: #fffdf2;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+  animation: mottoGlow 4s ease-in-out infinite alternate;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@keyframes mottoGlow {
+  from { text-shadow: 0 0 8px rgba(212,175,55,0.8); }
+  to { text-shadow: 0 0 20px rgba(255,220,120,0.9); }
+}
+
+.scroll-text,
+.down-arrow {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  color: black;
+  opacity: 0.8;
+}
+
+.down-arrow {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  50% { transform: translateY(6px); }
+}
