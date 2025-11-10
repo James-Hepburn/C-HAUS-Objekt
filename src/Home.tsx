@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import type { ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "./components/Header";
@@ -37,8 +38,6 @@ export default function Home() {
   }, []);
 
   // Handlers
-  const handleNext = () => setCurrentIndex((i) => (i + 1) % images.length);
-  const handlePrev = () => setCurrentIndex((i) => (i - 1 + images.length) % images.length);
   const handleCloseMailingList = () => setShowMailingList(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -65,6 +64,10 @@ export default function Home() {
     setShowMailingList(false);
   };
 
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setEmail(e.target.value);
+  };
+
   return (
     <motion.div
       className="home-page"
@@ -78,9 +81,116 @@ export default function Home() {
 
       <main>
         {/* Grid Layout */}
-        <GridLayout>
-          
-        </GridLayout>
+        <GridLayout
+          /* Box1 with Logo */
+          box1={
+            <img
+              src="/Logo-Tall-Transparent.png"
+              alt="Logo"
+              className="logo-image"
+            />
+          }
+
+          /* Box2 with Carousel */
+          box2={
+            <div className="carousel">
+              <img
+                src={images[currentIndex]}
+                alt={`Work ${currentIndex + 1}`}
+                className="carousel-image"
+                onClick={() => setIsLightboxOpen(true)}
+              />
+            </div>
+          }
+
+          /* Box3 with Coin */
+          box3={
+            <div className="purse">
+              <div className="coin">
+                <div className="front"></div>
+                <div className="back"></div>
+                <div className="side">
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                  <div className="spoke"></div>
+                </div>
+              </div>
+            </div>
+          }
+
+          /* Box4 with Services Button */
+          box4={
+            <button onClick={() => navigate("/services")}>
+              Services
+            </button>
+          }
+
+          /* Box5 with Contact Button */
+          box5={
+            <button onClick={() => navigate("/contact")}>
+              Contact
+            </button>
+          }
+
+          /* Box6 with Mailing List and Contact Information */
+          box6={
+            showMailingList ? (
+              <motion.div
+                className="mailing-list-full"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <button
+                  className="close-btn"
+                  onClick={handleCloseMailingList}
+                  aria-label="Close mailing list"
+                >
+                  ✕
+                </button>
+
+                <div className="mailing-list-content">
+                  <h2>Join Our Mailing List</h2>
+                  <form onSubmit={handleSubmit}>
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      value={email}
+                      onChange={handleEmailChange}
+                      required
+                    />
+                    <button type="submit">Sign Up</button>
+                  </form>
+                </div>
+              </motion.div>
+            ) : (
+              <div className="info-placeholder">
+                <h2>Want to learn more about us?</h2>
+                <p>Click below for more info.</p>
+                <button
+                  className="gold-btn"
+                  onClick={() => navigate("/about")}
+                >
+                  Learn More
+                </button>
+              </div>
+            )
+          }
+        />
       </main>
 
       {/* Footer Component */}

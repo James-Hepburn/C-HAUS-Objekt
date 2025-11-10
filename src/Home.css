@@ -24,3 +24,458 @@ main {
   overflow-x: hidden;  
   background: url('/zebra_print_background.jpg') center/cover no-repeat;
 }
+
+/* Box1 with Logo */
+.logo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+  filter: brightness(0.97) contrast(1.08);
+  background-color: transparent;
+}
+
+/* Box4 and Box5 Buttons */
+.box4 button,
+.box5 button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 14px;
+  font: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  background: linear-gradient(135deg, #e2c35d, #caa432, #f0d879);
+  animation: shimmer 6s ease-in-out infinite;
+  box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.25),
+      0 0 8px rgba(212, 175, 55, 0.3);
+  font-size: xx-large;
+}
+
+.box4 button:hover,
+.box5 button:hover {
+  background: linear-gradient(135deg, #f8e27f, #d8b84a, #b98a1d);
+  color: #fff;
+  transform: scale(1.04);
+  box-shadow:
+      0 10px 22px rgba(212, 175, 55, 0.5),
+      0 0 12px rgba(255, 220, 120, 0.6);
+  animation: shimmer-hover 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer-hover {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Box3 with Coin */
+.purse {
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -60px;
+  perspective: 1000px;
+  filter: saturate(1.45) hue-rotate(2deg);
+}
+
+.coin {
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform-origin: 50%;
+  animation: spin 3s linear infinite;
+}
+
+.coin .front,
+.coin .back {
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.coin .front {
+  transform: translateZ(6px);
+}
+
+.coin .back {
+  transform: translateZ(-6px) rotateY(180deg);
+}
+
+.coin .side {
+  transform: translateX(54px);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.coin .side .spoke {
+  height: 120px;
+  width: 12px;
+  position: absolute;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.coin .side .spoke:before,
+.coin .side .spoke:after {
+  content: '';
+  display: block;
+  height: 11.7px;
+  width: 12px;
+  position: absolute;
+  transform: rotateX(84.375deg);
+  background: linear-gradient(to bottom, hsl(42, 60%, 75%) 0%, hsl(42, 60%, 75%) 74%, hsl(42, 40%, 60%) 75%, hsl(42, 40%, 60%) 100%);
+  background-size: 100% 374.4px;
+}
+
+.coin .side .spoke:before {
+  transform-origin: top center;
+}
+
+.coin .side .spoke:after {
+  bottom: 0;
+  transform-origin: center bottom;
+}
+
+.coin .side .spoke:nth-child(1) { transform: rotateY(90deg) rotateX(11.25deg); }
+.coin .side .spoke:nth-child(2) { transform: rotateY(90deg) rotateX(22.5deg); }
+.coin .side .spoke:nth-child(3) { transform: rotateY(90deg) rotateX(33.75deg); }
+.coin .side .spoke:nth-child(4) { transform: rotateY(90deg) rotateX(45deg); }
+.coin .side .spoke:nth-child(5) { transform: rotateY(90deg) rotateX(56.25deg); }
+.coin .side .spoke:nth-child(6) { transform: rotateY(90deg) rotateX(67.5deg); }
+.coin .side .spoke:nth-child(7) { transform: rotateY(90deg) rotateX(78.75deg); }
+.coin .side .spoke:nth-child(8) { transform: rotateY(90deg) rotateX(90deg); }
+.coin .side .spoke:nth-child(9) { transform: rotateY(90deg) rotateX(101.25deg); }
+.coin .side .spoke:nth-child(10) { transform: rotateY(90deg) rotateX(112.5deg); }
+.coin .side .spoke:nth-child(11) { transform: rotateY(90deg) rotateX(123.75deg); }
+.coin .side .spoke:nth-child(12) { transform: rotateY(90deg) rotateX(135deg); }
+.coin .side .spoke:nth-child(13) { transform: rotateY(90deg) rotateX(146.25deg); }
+.coin .side .spoke:nth-child(14) { transform: rotateY(90deg) rotateX(157.5deg); }
+.coin .side .spoke:nth-child(15) { transform: rotateY(90deg) rotateX(168.75deg); }
+.coin .side .spoke:nth-child(16) { transform: rotateY(90deg) rotateX(180deg); }
+
+.coin.skeleton .front,
+.coin.skeleton .back {
+  display: none;
+}
+
+.coin.skeleton .side,
+.coin.skeleton .side .spoke,
+.coin.skeleton .side .spoke:before,
+.coin.skeleton .side .spoke:after {
+  backface-visibility: visible;
+}
+
+.coin.skeleton .side .spoke {
+  background: rgba(170, 170, 170, 0.1);
+}
+
+.coin.skeleton .side .spoke:before {
+  background: rgba(255, 170, 170, 0.2);
+}
+
+.coin.skeleton .side .spoke:after {
+  background: rgba(204, 204, 255, 0.2);
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.coin .front {
+  transform: translateZ(6px);
+  background: radial-gradient(circle at 30% 30%, #f8e27f, #d4af37 40%, #b98a1d 70%, #6b5b28 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fffdf2;
+  letter-spacing: 1px;
+  text-shadow:
+    0 0 6px rgba(212, 175, 55, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6);
+  backface-visibility: hidden;
+}
+
+.coin .front::after {
+  content: "SHOP COMING SOON";
+}
+
+.coin .back {
+  transform: translateZ(-6px) rotateY(180deg);
+  background: radial-gradient(circle at 70% 70%, #f8e27f, #d4af37 40%, #b98a1d 70%, #6b5b28 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fffdf2;
+  letter-spacing: 1px;
+  text-shadow:
+    0 0 6px rgba(212, 175, 55, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6);
+  backface-visibility: hidden;
+}
+
+.coin .back::after {
+  content: "C. HAUS OBJEKT";
+}
+
+.box3 {
+  background: linear-gradient(
+    120deg,
+    #000 0%,
+    #1a1a1a 25%,
+    #000 50%,
+    #1a1a1a 75%,
+    #000 100%
+  );
+  animation: metallicSweep 8s linear infinite;
+  box-shadow:
+    inset 0 0 50px rgba(255, 255, 255, 0.05),
+    inset 0 0 120px rgba(255, 255, 255, 0.02),
+    0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.box3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  animation: lightGlide 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes metallicSweep {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes lightGlide {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+
+/* Box2 with Carousel */
+.box2 {
+  padding: 0;
+  overflow: hidden;  
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 14px;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  border-radius: 0; 
+  transition: opacity 0.6s ease;
+  cursor: zoom-in;
+  display: block;
+  margin: 0;
+  background-color: #fff;
+}
+
+/* Box6 with Mailing List and Contact Information */
+.mailing-list-full {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  text-align: center;
+  color: #111;
+  animation: fadeInMailing 0.6s ease-out forwards;
+  overflow: hidden;
+}
+
+@keyframes fadeInMailing {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  background: white;
+  font-size: 1rem;
+  font-weight: black;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease; 
+  text-align: center;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.close-btn:hover {
+  color: #b98a1d;
+  transform: scale(1.2);
+}
+
+.mailing-list-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.5px;
+}
+
+.mailing-list-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.mailing-list-content input[type="email"] {
+  width: 90%;
+  max-width: 320px;
+  padding: 0.8rem 1rem;
+  border-radius: 30px;
+  border: 2px solid #d4af37;
+  font-size: 1rem;
+  outline: none;
+  color: #333;
+  background: #fffef9;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.25),
+    inset 0 0 4px rgba(255, 255, 255, 0.4);
+}
+
+.mailing-list-content input[type="email"]:focus {
+  border-color: #b98a1d;
+  box-shadow:
+    0 0 10px rgba(212, 175, 55, 0.6),
+    inset 0 0 6px rgba(255, 255, 255, 0.5);
+  background: #fffdf5;
+}
+
+.mailing-list-content button[type="submit"] {
+  background: linear-gradient(135deg, #e2c35d, #caa432, #f0d879);
+  background-size: 200% 200%;
+  color: #fffdf2;
+  border: none;
+  border-radius: 30px;
+  padding: 0.7rem 1.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.25),
+    0 0 8px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+  animation: shimmer 6s ease-in-out infinite;
+}
+
+.mailing-list-content button[type="submit"]:hover {
+  background: linear-gradient(135deg, #f8e27f, #d8b84a, #b98a1d);
+  transform: translateY(-2px) scale(1.07);
+  box-shadow:
+    0 10px 22px rgba(212, 175, 55, 0.5),
+    0 0 12px rgba(255, 220, 120, 0.6);
+}
+
+.info-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: #111;
+  border-radius: 12px;
+}
+
+.info-placeholder h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+  font-weight: 700;
+}
+
+.info-placeholder p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.gold-btn {
+  background: linear-gradient(135deg, #e2c35d, #caa432, #f0d879);
+  background-size: 200% 200%;
+  color: #fffdf2;
+  border: none;
+  border-radius: 30px;
+  padding: 0.7rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.25),
+    0 0 8px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+  animation: shimmer 6s ease-in-out infinite;
+}
+
+.gold-btn:hover {
+  background: linear-gradient(135deg, #f8e27f, #d8b84a, #b98a1d);
+  transform: translateY(-2px) scale(1.07);
+  box-shadow:
+    0 10px 22px rgba(212, 175, 55, 0.5),
+    0 0 12px rgba(255, 220, 120, 0.6);
+}
