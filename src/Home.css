@@ -249,7 +249,7 @@ main {
   content: "C. HAUS OBJEKT";
 }
 
-.box3 {
+.home-page .box3 {
   background: linear-gradient(
     120deg,
     #000 0%,
@@ -265,7 +265,7 @@ main {
     0 0 30px rgba(0, 0, 0, 0.6);
 }
 
-.box3::before {
+.home-page .box3::before {
   content: "";
   position: absolute;
   top: 0;
@@ -295,7 +295,7 @@ main {
 }
 
 /* Box2 with Carousel */
-.box2 {
+.home-page .box2 {
   padding: 0;
   overflow: hidden;  
 }

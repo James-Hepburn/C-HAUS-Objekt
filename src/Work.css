@@ -1,0 +1,26 @@
+tml,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    --pantone-7527: #cdc6b9;
+    --pantone-5425: #6b859c;
+    --pantone-571: #a7d3cf;
+}
+
+main {
+  width: 100vw;        
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden;  
+  background-color: black;
+}
