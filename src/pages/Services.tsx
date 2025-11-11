@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import GridLayout from "./components/GridLayout";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import GridLayout from "../components/GridLayout";
 import "./Services.css";
 
-export default function Work() {
+export default function Services() {
     const navigate = useNavigate();
 
     const [currentIndex, setCurrentIndex] = useState(0);

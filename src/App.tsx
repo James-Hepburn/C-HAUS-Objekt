@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Landing from "./Landing"; 
-import Home from "./Home";
-import Work from "./Work";
-import Services from "./Services";
+import Landing from "./pages/Landing"; 
+import Home from "./pages/Home";
+import Work from "./pages/Work";
+import Services from "./pages/Services";
+import Shop from "./pages/ShopComingSoon";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/work" element={<Work />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/shop" element={<Shop />} />
       </Routes>
     </Router>
   );

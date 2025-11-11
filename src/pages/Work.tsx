@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import GridLayout from "./components/GridLayout";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import GridLayout from "../components/GridLayout";
 import "./Work.css";
 
 export default function Work() {
