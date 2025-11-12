@@ -5,6 +5,7 @@ import Work from "./pages/Work";
 import Services from "./pages/Services";
 import Shop from "./pages/ShopComingSoon";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
