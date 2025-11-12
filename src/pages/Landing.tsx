@@ -167,7 +167,7 @@ export default function Landing() {
             }}
             style={{
               position: "absolute",
-              bottom: window.innerWidth <= 900 ? "140px" : "280px",
+              bottom: window.innerWidth <= 900 ? "180px" : "280px",
               left: piece.left,
               width: piece.size,
               height: piece.size * 0.6,
