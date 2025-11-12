@@ -84,11 +84,31 @@ export default function Home() {
         <GridLayout
           /* Box1 with Logo */
           box1={
-            <img
-              src="/Logo-Tall-Transparent.png"
-              alt="Logo"
-              className="logo-image"
-            />
+            window.innerWidth > 900 ? (
+              <img
+                src="/Logo-Tall-Transparent.png"
+                alt="Logo"
+                className="logo-image logo-box1"
+              />
+            ) : (
+              <div className="box1-content">
+                <h3>Our Products</h3>
+                <p>
+                  Each C.HAUS Objekt piece is made with care and meaning. 
+                  We focus on design that feels personal and reflects culture, creativity, and story.
+                </p>
+                <p>We specialize in:</p>
+                <ul>
+                  <li>Custom Gift Design</li>
+                  <li>Brand & Organization Design</li>
+                  <li>Merchandise & Apparel</li>
+                  <li>Print & Stationery Design</li>
+                </ul>
+                <p>
+                  From gifts to brand projects, our work combines thoughtful design with a personal touch.
+                </p>
+              </div>
+            )
           }
 
           /* Box2 with Carousel */
@@ -169,6 +189,62 @@ export default function Home() {
                     <input
                       type="email"
                       placeholder="Enter your email"
+                      value={email}
+                      onChange={handleEmailChange}
+                      required
+                    />
+                    <button type="submit">Sign Up</button>
+                  </form>
+                </div>
+              </motion.div>
+            ) : (
+              <div className="info-placeholder">
+                <h2>Want to learn more about us?</h2>
+                <p>Click below for more info.</p>
+                <button
+                  className="gold-btn"
+                  onClick={() => navigate("/about")}
+                >
+                  Learn More
+                </button>
+              </div>
+            )
+          }
+
+          /* Merged Top Box with Logo */
+          mergedTop={
+            <img
+              src="/Logo-Tall-Transparent.png"
+              alt="Logo"
+              className="logo-image logo-merged-top"
+            />
+          }
+
+          /* Merged Bottom Box with Mailing List and Information */
+          mergedBottom={
+            showMailingList ? (
+              <motion.div
+                className="mailing-list-full"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+
+                <button
+                  className="close-btn"
+                  onClick={handleCloseMailingList}
+                  aria-label="Close mailing list"
+                >
+                  ✕
+                </button>
+
+                <div className="mailing-list-content">
+                  <h2>Join Our Mailing List</h2>
+                  <form onSubmit={handleSubmit}>
+                    <input
+                      type="email"
+                      placeholder="Email"
                       value={email}
                       onChange={handleEmailChange}
                       required

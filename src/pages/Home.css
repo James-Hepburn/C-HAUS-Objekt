@@ -26,7 +26,7 @@ body {
 }
 
 /* Box1 with Logo */
-.logo-image {
+.home-page .logo-box1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -499,4 +499,101 @@ body {
   box-shadow:
     0 10px 22px rgba(212, 175, 55, 0.5),
     0 0 12px rgba(255, 220, 120, 0.6);
+}
+
+@media (max-width: 900px) {
+  .home-page .logo-box1 {
+    display: none;
+  }
+
+  .home-page .logo-merged-top {
+    display: block;
+    width: 80%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .home-page .merged-bottom .mailing-list-full,
+  .home-page .merged-bottom .info-placeholder {
+    padding: 2rem 1.5rem;
+  }
+
+  .home-page .merged-bottom h2 {
+    font-size: 1.3rem;
+  }
+
+  .home-page .merged-bottom .close-btn {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+    background: white;
+    line-height: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .home-page .merged-bottom .close-btn:hover {
+    transform: scale(1.15);
+    color: #b98a1d;
+  }
+
+  .home-page .box1 .box1-content {
+    margin-top: 5.25rem;
+  }
+
+  .home-page .box1 h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .home-page .box1 p {
+    color: #000;
+    font-weight: 300;
+    padding: 0.4rem;
+  }
+
+  .home-page .box1 ul {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    text-align: left;
+    margin-left: 7px;
+  }
+
+  .home-page .box1 li {
+    position: relative;
+    font-size: 0.7rem;
+    line-height: 1.6;
+    color: #111;
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+    padding-left: 0.7rem;
+    transition: color 0.3s ease, transform 0.25s ease;
+  }
+
+  .home-page .box1 li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #d4af37;
+    font-size: 0.7rem;
+    transition: transform 0.25s ease, color 0.3s ease;
+  }
+
+  .home-page .box1 li:hover {
+    color: #d4af37;
+  }
+
+  .home-page .box1 li:hover::before {
+    color: #f8e27f;
+  }
 }

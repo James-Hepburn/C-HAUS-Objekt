@@ -7,6 +7,8 @@ interface GridLayoutProps {
   box4?: React.ReactNode;
   box5?: React.ReactNode;
   box6?: React.ReactNode;
+  mergedTop?: React.ReactNode;
+  mergedBottom?: React.ReactNode;
 }
 
 export default function GridLayout({
@@ -16,6 +18,8 @@ export default function GridLayout({
   box4,
   box5,
   box6,
+  mergedTop,
+  mergedBottom,
 }: GridLayoutProps) {
   return (
     <div className="content-container">
@@ -23,8 +27,8 @@ export default function GridLayout({
 
       <div className="right-column">
         <div className="box box2">{box2}</div>
-        <div className="merged-top"></div>
-        <div className="merged-bottom"></div>
+        <div className="merged-top">{mergedTop}</div>
+        <div className="merged-bottom">{mergedBottom}</div>
 
         <div className="middle-section">
           <div className="left-half">
