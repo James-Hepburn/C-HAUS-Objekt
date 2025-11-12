@@ -593,16 +593,16 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    color: #d4af37;
+    color: #00b1d2;
     font-size: 0.7rem;
     transition: transform 0.25s ease, color 0.3s ease;
   }
 
   .home-page .box1 li:hover {
-    color: #d4af37;
+    color: #00b1d2;
   }
 
   .home-page .box1 li:hover::before {
-    color: #f8e27f;
+    color: #007ea6;
   }
 }

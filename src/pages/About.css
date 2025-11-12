@@ -40,8 +40,9 @@ body {
   padding: 0;
   margin: 0;
   color: #fff;
-  background: linear-gradient(135deg, #e2c35d, #caa432, #f0d879);
-  animation: shimmer 6s ease-in-out infinite;
+  transition: color 0.3s ease;
+  background: linear-gradient(135deg, #00b1d2, #007ea6, #4cd3f0);
+  animation: shimmerBlue 3s ease-in-out infinite;
   box-shadow:
       0 4px 12px rgba(0, 0, 0, 0.25),
       0 0 8px rgba(212, 175, 55, 0.3);
@@ -50,22 +51,22 @@ body {
 
 .about-page .box4 button:hover,
 .about-page .box5 button:hover {
-  background: linear-gradient(135deg, #f8e27f, #d8b84a, #b98a1d);
-  color: #fff;
   transform: scale(1.04);
+  background: linear-gradient(135deg, #4cd3f0, #00b1d2, #009fc1);
+  color: #fff;
   box-shadow:
-      0 10px 22px rgba(212, 175, 55, 0.5),
-      0 0 12px rgba(255, 220, 120, 0.6);
-  animation: shimmer-hover 3s ease-in-out infinite;
+    0 10px 22px rgba(0, 177, 210, 0.6),
+    0 0 14px rgba(76, 211, 240, 0.8);
+  animation: shimmerBlueHover 3s ease-in-out infinite;
 }
 
-@keyframes shimmer {
+@keyframes shimmerBlue {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-@keyframes shimmer-hover {
+@keyframes shimmerBlueHover {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
@@ -112,19 +113,19 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  color: #d4af37;
+  color: #00b1d2;
   font-size: 1.2rem;
   line-height: 1.4rem;
   transition: transform 0.25s ease, color 0.3s ease;
 }
 
 .about-page .box6 li:hover {
-  color: #d4af37;
+  color: #00b1d2;
   transform: translateX(5px);
 }
 
 .about-page .box6 li:hover::before {
-  color: #f8e27f;
+  color: #007ea6;
   transform: scale(1.3);
 }
 
@@ -175,17 +176,17 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    color: #d4af37;
+    color: #00b1d2;
     font-size: 0.7rem;
     line-height: 1.4rem;
     transition: transform 0.25s ease, color 0.3s ease;
   }
 
   .about-page .merged-bottom li:hover {
-    color: #d4af37;
+    color: #00b1d2;
   }
 
   .about-page .merged-bottom li:hover::before {
-    color: #f8e27f;
+    color: #007ea6;
   }
 }
