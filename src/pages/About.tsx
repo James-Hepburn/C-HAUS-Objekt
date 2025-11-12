@@ -101,6 +101,36 @@ export default function About() {
                 </ul>
             </div>
         }
+
+        /* Merged Top Box with Text */
+        mergedTop={
+            <div className="box2-content">
+                <h3>Mission Story</h3>
+                <p>
+                    At C.HAUS Objekt, our mission is to craft meaningful gifts 
+                    that tell a story. We celebrate culture, artistry, and 
+                    connection through thoughtfully designed objects that honour 
+                    heritage and inspire belonging. By blending traditional 
+                    craftsmanship with modern design, we create unique pieces and 
+                    collaborate with organizations to foster community, express 
+                    identity, and make every gift a lasting reflection of heart 
+                    and purpose.
+                </p>
+            </div>
+        }
+
+        /* Merged Bottom Box with Text */
+        mergedBottom={
+            <div className="box6-content">
+                <h3>Our Services</h3>
+                <ul>
+                  <li>Custom Gift Design</li>
+                  <li>Brand & Organization Design</li>
+                  <li>Merchandise & Apparel</li>
+                  <li>Print & Stationery Design</li>
+                </ul>
+            </div>
+        }
         />
       </main>
 
