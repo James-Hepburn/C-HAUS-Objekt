@@ -129,6 +129,20 @@ export default function Contact() {
                 <p>Facebook Account</p>
             </div>
         }
+
+        /* Merged Top Box with Email Button */
+        mergedTop={
+            <a href="mailto:info@chausobjekt.com">
+                <img src="/email.png" alt="Email" />
+            </a>
+        }
+
+        /* Merged Bottom Box with Phone Button */
+        mergedBottom={
+            <a href="tel:+1234567890">
+                <img src="/phone.png" alt="Phone" />
+            </a>
+        }
         />
       </main>
 
