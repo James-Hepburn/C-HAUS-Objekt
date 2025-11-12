@@ -170,22 +170,35 @@
 
 @media screen and (max-width: 900px) {
   .content-container {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    width: 90%;
+    width: 80%;
     height: 80vh;
-    margin: 0 auto;
+    margin: 900px auto 120px;
     align-items: stretch;
   }
 
   .content-container > * {
     height: 100%;
+    align-self: stretch;
+  }
+
+  .box1 {
+    grid-column: 1 / 2;
+    display: block;
+    position: relative;
+    overflow: hidden;
   }
 
   .right-column {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 15px;
+    height: 100%;
+    width: 100%;
+    position: relative;
   }
 
   .box2,
@@ -193,9 +206,9 @@
   .left-half,
   .box3,
   .bottom-row,
-  .box4,
-  .box5,
-  .box6 {
+  .box5-left,
+  .box5-right,
+  .box4and6 {
     display: none !important;
   }
 
