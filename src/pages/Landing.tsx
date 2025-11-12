@@ -84,13 +84,32 @@ export default function Landing() {
           y: -150,
           transition: { duration: 0.8, ease: "easeInOut" },
         });
-        motto.start({
-          opacity: 0,
-          transition: { duration: 0.8, ease: "easeInOut" },
-        });
       }, 3000);
 
-      setTimeout(() => navigate("/home"), 4000);
+      setTimeout(async () => {
+        await base.start({
+          position: "fixed",
+          left: "50%",
+          top: "50%",
+          x: "-50%",
+          y: "-50%",
+          width: 520,
+          height: 280,
+          borderRadius: 20,
+          transition: { duration: 0 } 
+        });
+
+        await base.start({
+          width: "100vw",
+          height: "100vh",
+          borderRadius: 0,
+          transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] }
+        });
+
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+
+        navigate("/home");
+      }, 3200);
     };
 
     window.addEventListener("scroll", trigger);
