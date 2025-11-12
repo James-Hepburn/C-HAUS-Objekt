@@ -225,6 +225,7 @@ main {
 .gift-lid,
 .gift-base {
   color: inherit;
+  border: 2px solid black;
 }
 
 .winner-message {
@@ -310,10 +311,11 @@ main {
     margin-top: 0;
   }
 
-  .shop-coming-soon {
+  .shop-coming-soon-page {
     justify-content: flex-start;
     overflow-y: auto;
     min-height: 100vh;
+    margin-top: 700px;
   }
 
   .gift-box-row {
@@ -329,7 +331,7 @@ main {
     height: 45vw;
     position: relative;
     gap: 0 !important;
-    margin-top: 0 !important;
+    margin-top: 70px !important;
   }
 
   .gift-lid {
