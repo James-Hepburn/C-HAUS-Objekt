@@ -368,7 +368,7 @@ body {
 .close-btn {
   position: absolute;
   top: 0.5rem;
-  right: 0.8rem;
+  right: 0.5rem;
   background: white;
   font-size: 1rem;
   font-weight: black;
@@ -383,6 +383,7 @@ body {
 
 .close-btn:hover {
   color: #b98a1d;
+  border-color: #b98a1d;
   transform: scale(1.2);
 }
 

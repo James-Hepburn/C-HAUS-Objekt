@@ -15,7 +15,7 @@ body {
     --pantone-571: #a7d3cf;
 }
 
-main {
+.services-page main {
   width: 100vw;        
   min-height: 100vh;
   display: flex;
