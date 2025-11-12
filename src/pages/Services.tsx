@@ -13,12 +13,21 @@ export default function Services() {
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
     const [isCardLightboxOpen, setIsCardLightboxOpen] = useState(false);
 
-    const images = [
+    var images = [
         "/WEBSITE TSHIRTS-01.png",
         "/WEBSITE TSHIRTS-02.png",
         "/WEBSITE TSHIRTS-03.png",
         "/WEBSITE TSHIRTS-04.png"
     ];
+
+    const mobile_images = [
+        "/WEBSITE TSHIRTS-01-Tall.png",
+        "/WEBSITE TSHIRTS-02-Tall.png",
+        "/WEBSITE TSHIRTS-03-Tall.png",
+        "/WEBSITE TSHIRTS-04-Tall.png"
+    ];
+
+    images = window.innerWidth <= 900 ? mobile_images : images;
 
     // Rotate images automatically
     useEffect(() => {
@@ -95,6 +104,33 @@ export default function Services() {
 
         /* Box6 with Business Card Example */
         box6={
+            <div className="box6-content">
+                <h3>Business Card Design</h3>
+                <img 
+                    src="/Business-Card.png" 
+                    alt="Business Card" 
+                    onClick={() => setIsCardLightboxOpen(true)} 
+                />
+            </div>
+        }
+
+        /* Merged Top Box with Carousel */
+        mergedTop={
+            <div className="carousel">
+                <div className="box2-content">
+                    <h3>T-Shirt Designs</h3>
+                    <img
+                        src={images[currentIndex]}
+                        alt={`Work ${currentIndex + 1}`}
+                        className="carousel-image"
+                        onClick={() => setIsLightboxOpen(true)}
+                    />
+                </div>
+            </div>
+        }
+
+        /* Merged Bottom Box with Image */
+        mergedBottom={
             <div className="box6-content">
                 <h3>Business Card Design</h3>
                 <img 

@@ -34,26 +34,31 @@ body {
   justify-content: center;   
   align-items: center;
   text-align: center;
-  overflow: hidden;         
   box-sizing: border-box;
 }
 
 .services-page .box6-content h3 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #000;
+  color: black;
   margin-bottom: 3rem;
   margin-top: 0;
+  z-index: 2;
+  position: relative;
+  top: -8rem;
+  right: -5.5rem;
 }
 
 .services-page .box6-content img {
-  max-width: 100%; 
-  max-height: 55%; 
-  object-fit: contain; 
-  border-radius: 12px;
-  transform: scale(1.3); 
-  transform-origin: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  box-shadow: none;
   cursor: zoom-in;
+  background-color: #335644;
 }
 
 /* Box2 with Carousel */
@@ -226,4 +231,90 @@ body {
 .services-page .box1 li:hover::before {
   color: #f8e27f;
   transform: scale(1.3);
+}
+
+@media (max-width: 900px) {
+  .services-page .box1 .box1-content {
+    margin-top: 8rem;
+  }
+
+  .services-page .box1 h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .services-page .box1 p {
+    color: #000;
+    font-weight: 300;
+    padding: 0.4rem;
+  }
+
+  .services-page .box1 ul {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    text-align: left;
+    margin-left: 7px;
+  }
+
+  .services-page .box1 li {
+    position: relative;
+    font-size: 0.7rem;
+    line-height: 1.6;
+    color: #111;
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+    padding-left: 0.7rem;
+    transition: color 0.3s ease, transform 0.25s ease;
+  }
+
+  .services-page .box1 li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #d4af37;
+    font-size: 0.7rem;
+    transition: transform 0.25s ease, color 0.3s ease;
+  }
+
+  .services-page .box1 li:hover {
+    color: #d4af37;
+  }
+
+  .services-page .box1 li:hover::before {
+    color: #f8e27f;
+  }
+
+  .services-page .box2-content h3 {
+    font-size: 1rem;
+  }
+
+  .services-page .box6-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    background-color: #335644; 
+  }
+
+  .services-page .box6-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    object-position: center;
+    border-radius: 14px;
+    background-color: #335644; 
+  }
+
+  .services-page .box6-content h3 {
+    font-size: 1rem;
+    top: -8.5rem;
+    left: 0;
+  }
 }
