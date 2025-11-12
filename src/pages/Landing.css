@@ -19,7 +19,7 @@
   position: fixed;
   inset: 0;
   background: linear-gradient(135deg, var(--pantone-7527), var(--pantone-571));
-  z-index: 0;         
+  z-index: 0;
   opacity: 1;
 }
 
@@ -27,12 +27,12 @@
   position: fixed;
   inset: 0;
   background: url('/zebra_print_background.jpg') center/cover no-repeat;
-  mix-blend-mode: multiply; 
+  mix-blend-mode: multiply;
   z-index: 1;
   opacity: 0;
 }
 
-.gift {
+.landing-gift {
   position: relative;
   width: 520px;
   height: 380px;
@@ -40,33 +40,73 @@
   z-index: 100;
 }
 
-.gift-lid,
-.gift-base {
+.landing-gift-lid {
   position: absolute;
-  left: 0;
+  top: 0;
+  left: -20px;
+  width: 560px;
+  height: 130px;
   background: black;
   border: 2px solid #000;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 200;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 }
 
-.gift-lid {
-  width: 560px;
-  height: 130px;
-  top: 0;
-  left: -20px;
+.landing-gift-base {
+  position: absolute;
+  bottom: 0;
+  width: 520px;
+  height: 280px;
+  background: black;
+  border: 2px solid #000;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 100;
 }
 
-.company-name {
+.landing-bow {
+  position: relative;
+  top: -95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-bow-left,
+.landing-bow-right {
+  width: 70px;
+  height: 40px;
+  border: 6px solid black;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.landing-bow-left {
+  transform: rotate(50deg);
+  margin-right: -20px;
+}
+
+.landing-bow-right {
+  transform: rotate(-50deg);
+  margin-left: -20px;
+}
+
+.landing-company-name {
   font-family: var(--font-primary);
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
   opacity: 0;
-  position: absolute;       
-  transform: translateX(-50%); 
+  position: absolute;
+  transform: translateX(-50%);
   width: 100%;
   text-align: center;
   letter-spacing: 2px;
@@ -94,16 +134,7 @@
   }
 }
 
-.gift-base {
-  bottom: 0;
-  width: 520px;
-  height: 280px;
-  flex-direction: column;
-  text-align: center;
-  overflow: hidden;
-}
-
-.motto {
+.landing-motto {
   display: flex;
   flex-direction: column;
   align-items: center;
