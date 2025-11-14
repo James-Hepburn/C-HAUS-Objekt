@@ -195,13 +195,27 @@ export default function Landing() {
 
         <motion.div className="landing-gift-base" animate={base}>
           <motion.div
-            className="landing-motto"
+            className="landing-motto stacked-motto"
             initial={{ opacity: 0 }}
             animate={motto}
           >
-            <p>Timeless culture</p>
-            <p>Objects to gift</p>
-            <p>Designs to keep</p>
+            <p className="motto-line">
+              <span className="word pink">timeless culture</span>
+              <span className="word">objects to gift</span>
+              <span className="word">designs to keep</span>
+            </p>
+
+            <p className="motto-line">
+              <span className="word">timeless culture</span>
+              <span className="word blue">objects to gift</span>
+              <span className="word">designs to keep</span>
+            </p>
+
+            <p className="motto-line">
+              <span className="word">timeless culture</span>
+              <span className="word">objects to gift</span>
+              <span className="word yellow">designs to keep</span>
+            </p>
           </motion.div>
         </motion.div>
       </div>

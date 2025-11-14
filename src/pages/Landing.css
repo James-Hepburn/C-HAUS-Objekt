@@ -43,8 +43,8 @@
 .landing-gift-lid {
   position: absolute;
   top: 0;
-  left: -20px;
-  width: 560px;
+  left: -120px;
+  width: 760px;
   height: 130px;
   background: black;
   border: 2px solid #000;
@@ -62,7 +62,7 @@
   left: 50%;
   transform: translateX(-50%);
   transform-origin: center center;
-  width: 520px;
+  width: 700px;
   height: 280px;
   background: black;
   border: 2px solid #000;
@@ -150,17 +150,11 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
-  animation: mottoGlow 4s ease-in-out infinite alternate;
   margin: 0;
   padding: 0;
   width: 100%;
   z-index: 300; 
   pointer-events: none;
-}
-
-@keyframes mottoGlow {
-  from { text-shadow: 0 0 8px rgba(212,175,55,0.8); }
-  to { text-shadow: 0 0 20px rgba(255,220,120,0.9); }
 }
 
 .scroll-text,
@@ -179,7 +173,56 @@
   50% { transform: translateY(6px); }
 }
 
+.stacked-motto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+
+  font-family: 'Area', sans-serif;
+  text-transform: lowercase;
+  pointer-events: none;
+}
+
+.motto-line {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.word {
+  margin-right: 18px;
+  -webkit-text-stroke: 2.5px #e0e0e0;
+  opacity: 1;
+}
+
+.word.pink {
+  -webkit-text-stroke: 2.5px #ff2ea6;
+  opacity: 1;
+}
+
+.word.blue {
+  -webkit-text-stroke: 2.5px #3cb8ff;
+  opacity: 1;
+}
+
+.word.yellow {
+  -webkit-text-stroke: 2.5px #ffbe4b;
+  opacity: 1;
+}
+
 @media (max-width: 900px) {
+  .motto-line {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  .word {
+    -webkit-text-stroke: 1.3px;
+    margin-right: 10px;
+  }
 
   .landing-gift {
     width: 300px;
