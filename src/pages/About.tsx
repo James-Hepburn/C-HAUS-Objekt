@@ -30,14 +30,14 @@ export default function About() {
                     At C.HAUS Objekt, we believe that the most meaningful gifts 
                     tell a story. Rooted in culture and crafted with intention, 
                     our pieces are designed to celebrate tradition, artistry, and 
-                    connection. Each object is more than a product, it’s a reflection 
+                    connection. Each object is more than a product, it's a reflection 
                     of heritage, design, and heart.
                 </p>
                 <p>
                     We specialize in creating one-of-a-kind gifts that fuse cultural 
                     inspiration with thoughtful craftsmanship. From the materials we 
                     use to the stories behind each design, every detail is considered 
-                    to ensure you’re giving something truly unique and personal.
+                    to ensure you're giving something truly unique and personal.
                 </p>
                 <p>
                     In addition to our curated collection, we collaborate with 
