@@ -39,7 +39,7 @@ export default function Services() {
 
   return (
     <motion.div
-      className="services-page"
+      className="services-page services-new-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
