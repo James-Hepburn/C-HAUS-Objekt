@@ -149,7 +149,8 @@
   line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+  text-shadow: none;
+  animation: none;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -216,11 +217,10 @@
 
 @media (max-width: 900px) {
   .motto-line {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 0.7rem;
+    letter-spacing: 1.2px;
   }
   .word {
-    -webkit-text-stroke: 1.3px;
     margin-right: 10px;
   }
 
@@ -231,14 +231,14 @@
   }
 
   .landing-gift-lid {
-    left: -10px;
-    width: 320px;
+    left: -45px;
+    width: 385px;
     height: 80px;
     border-radius: 14px;
   }
 
   .landing-gift-base {
-    width: 300px;
+    width: 365px;
     height: 180px;
     border-radius: 14px;
   }
