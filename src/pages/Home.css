@@ -605,4 +605,12 @@ body {
   .home-page .box1 li:hover::before {
     color: #007ea6;
   }
+
+  .home-page .box1 {
+    text-align: left !important;
+  }
+
+  .home-page .box1 h3 {
+    margin-left: 0.3rem;
+  }
 }

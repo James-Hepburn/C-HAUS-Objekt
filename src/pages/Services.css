@@ -195,6 +195,14 @@ body {
   padding: 1rem;
 }
 
+.services-page .box1 {
+  text-align: left !important;
+}
+
+.services-page .box1 h3 {
+  margin-left: 1rem;
+}
+
 .services-page .box1 ul {
   list-style: none;
   margin: 1rem 0 0;
@@ -318,5 +326,9 @@ body {
     font-size: 1rem;
     top: -8.5rem;
     left: 0;
+  }
+
+  .services-page .box1 h3 {
+    margin-left: 0.3rem;
   }
 }

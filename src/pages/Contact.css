@@ -38,6 +38,10 @@ body {
   font-weight: 300;
 }
 
+.contact-page .box6 {
+  text-align: left !important;
+}
+
 /* Box2 with Logo */
 .logo-image {
   position: absolute;

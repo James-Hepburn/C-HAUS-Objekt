@@ -89,6 +89,17 @@ body {
   padding: 1rem;
 }
 
+.about-page .box1,
+.about-page .box2,
+.about-page .box6 {
+  text-align: left !important;
+}
+
+.about-page .box1 h3,
+.about-page .box2 h3 {
+  margin-left: 1rem;
+}
+
 /* Box6 with List */
 .about-page .box6 ul {
   list-style: none;
@@ -188,5 +199,17 @@ body {
 
   .about-page .merged-bottom li:hover::before {
     color: #007ea6;
+  }
+
+  .about-page .merged-top,
+  .about-page .mergeg-bottom,
+  .about-page .box1 {
+    text-align: left !important;
+  }
+
+  .about-page .merged-top h3,
+  .about-page .merged-bottom h3,
+  .about-page .box1 h3 {
+    margin-left: 0.3rem !important;
   }
 }
