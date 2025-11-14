@@ -130,18 +130,19 @@ export default function Contact() {
             </div>
         }
 
-        /* Merged Top Box with Email Button */
+        /* Merged Top Box with Email and Phone Buttons */
         mergedTop={
-            <a href="mailto:info@chausobjekt.com">
-                <img src="/email.png" alt="Email" />
-            </a>
-        }
+            <div className="button-container">
+                <p>Connect with us directly:</p>
+                <a href="mailto:info@chausobjekt.com">
+                    <img src="/email.png" alt="Email" />
+                </a>
 
-        /* Merged Bottom Box with Phone Button */
-        mergedBottom={
-            <a href="tel:+1234567890">
-                <img src="/phone.png" alt="Phone" />
-            </a>
+                <a href="tel:+1234567890">
+                    <img src="/phone.png" alt="Phone" />
+                </a>
+            </div>
+            
         }
         />
       </main>
