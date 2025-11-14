@@ -22,6 +22,7 @@ export default function ShopComingSoon() {
   const [confetti, setConfetti] = useState<ConfettiPiece[]>([]);
   const [activeBox, setActiveBox] = useState<number | null>(null);
   const [winnerBox, setWinnerBox] = useState<number | null>(null);
+  const [reward, setReward] = useState<number | null>(null);
   const [showMessage, setShowMessage] = useState(false);
   const lids: AnimControls[] = [useAnimation(), useAnimation(), useAnimation()];
 
@@ -73,16 +74,19 @@ export default function ShopComingSoon() {
     if (activeBox !== null || localStorage.getItem("openedBoxIndex") !== null) return;
 
     const roll = Math.random();
-    let winnerIndex: number;
+    let rewardValue;
 
-    if (roll <= 0.33) {
-      winnerIndex = index;
+    if (roll <= 0.15) {
+      rewardValue = 15; 
+    } else if (roll <= 0.40) {
+      rewardValue = 10; 
     } else {
-      const otherBoxes = [0, 1, 2].filter((i) => i !== index);
-      winnerIndex = otherBoxes[Math.floor(Math.random() * otherBoxes.length)];
+      rewardValue = 5;  
     }
 
-    localStorage.setItem("winnerBoxIndex", winnerIndex.toString());
+    setReward(rewardValue);
+    setWinnerBox(index); 
+
     localStorage.setItem("openedBoxIndex", index.toString());
     setActiveBox(index);
 
@@ -106,7 +110,7 @@ export default function ShopComingSoon() {
       });
 
     setTimeout(() => {
-      setWinnerBox(winnerIndex);
+      setWinnerBox(index);
       setShowMessage(true);
     }, 2000);
   };
@@ -114,10 +118,8 @@ export default function ShopComingSoon() {
   const boxColors = ["#E9468D", "#00B1D2", "#F47A42"];
 
   const messageText =
-    winnerBox !== null && activeBox !== null
-      ? winnerBox === activeBox
-        ? "You have won! Use code ZEBRA15 for 15% off your entire order!"
-        : "Better luck next time!"
+    reward !== null
+      ? `You won ${reward}% off! Use code ZEBRA${reward} at checkout!`
       : "";
 
   return (
@@ -137,12 +139,24 @@ export default function ShopComingSoon() {
 
         {showMessage && (
           <motion.div
-            className="winner-message"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="reward-ticket-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
           >
-            {messageText}
+            <motion.div
+              className="reward-ticket"
+              initial={{ scale: 0.8, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <div className="ticket-inner">
+                <p className="ticket-text">{messageText}</p>
+                <button className="ticket-close-btn" onClick={() => setShowMessage(false)}>
+                  CLOSE
+                </button>
+              </div>
+            </motion.div>
           </motion.div>
         )}
 
