@@ -7,7 +7,7 @@ import Shop from "./pages/ShopComingSoon";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
-import ServicesNew from "./pages/ServicesNew";
+import Grid from "./pages/Grid";
 
 export default function App() {
   return (
@@ -21,7 +21,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
-        <Route path="/services_new" element={<ServicesNew />} />
+        <Route path="/grid" element={<Grid />} />
       </Routes>
     </Router>
   );
