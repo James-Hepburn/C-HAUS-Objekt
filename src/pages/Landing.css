@@ -196,22 +196,22 @@
 
 .word {
   margin-right: 18px;
-  -webkit-text-stroke: 2.5px #e0e0e0;
+  -webkit-text-stroke: 1px #e0e0e0;
   opacity: 1;
 }
 
 .word.pink {
-  -webkit-text-stroke: 2.5px #ff2ea6;
+  -webkit-text-stroke: 1px #ff2ea6;
   opacity: 1;
 }
 
 .word.blue {
-  -webkit-text-stroke: 2.5px #3cb8ff;
+  -webkit-text-stroke: 1px #3cb8ff;
   opacity: 1;
 }
 
 .word.yellow {
-  -webkit-text-stroke: 2.5px #ffbe4b;
+  -webkit-text-stroke: 1px #ffbe4b;
   opacity: 1;
 }
 
