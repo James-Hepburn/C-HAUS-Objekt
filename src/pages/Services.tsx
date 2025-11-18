@@ -97,8 +97,11 @@ export default function Services() {
 
         /* Box5 with Work Button */
         box5={
-        <button onClick={() => navigate("/work")}>
-            Work
+        // <button onClick={() => navigate("/work")}>
+        //     Work
+        // </button>
+        <button onClick={() => navigate("/about")}>
+            About
         </button>
         }
 

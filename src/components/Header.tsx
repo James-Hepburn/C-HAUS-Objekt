@@ -33,7 +33,7 @@ export default function Header() {
       </button>
 
       <nav className={`nav-menu ${menuOpen ? "open" : ""}`}>
-        <button onClick={() => navigate("/work")}>Work</button>
+        {/* <button onClick={() => navigate("/work")}>Work</button> */}
         <button onClick={() => navigate("/services")}>Services</button>
         <button onClick={() => navigate("/shop")}>Shop</button>
         <button onClick={() => navigate("/about")}>About</button>
