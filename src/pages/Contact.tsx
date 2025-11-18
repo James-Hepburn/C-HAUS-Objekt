@@ -61,6 +61,46 @@ export default function Contact() {
       <main>
         {/* Grid Layout */}
         <GridLayout
+        /* Mobile Content */
+        mobileBox={
+            <div className="mobileBox-content">
+                <form onSubmit={handleSubmit}>
+                    <h3>Contact Form</h3>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required />
+                    <input type="email" id="email" name="email" placeholder="Email" required />
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" />
+                    <textarea id="message" name="message" rows={4} placeholder="Your message here..." required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                {showOverlay && (
+                    <div className="overlay">
+                        <div className="overlay-box">
+                            <p>Message sent successfully!</p>
+                            <button onClick={() => setShowOverlay(false)}>Close</button>
+                        </div>
+                    </div>
+                )}
+                {error && (
+                    <div className="overlay">
+                        <div className="overlay-box">
+                            <p>Failed to send message. Please try again later.</p>
+                            <button onClick={() => setError(false)}>Close</button>
+                        </div>
+                    </div>
+                )}
+
+                <div className="button-container">
+                <p>Connect with us directly:</p>
+                <a href="mailto:info@chausobjekt.com">
+                    <img src="/email.png" alt="Email" />
+                </a>
+
+                <a href="tel:+1234567890">
+                    <img src="/phone.png" alt="Phone" />
+                </a>
+            </div>
+            </div>
+        }
         /* Box1 with Form */
         box1={
             <div className="box1-content">
@@ -128,21 +168,6 @@ export default function Contact() {
                 <p>Twitter Account</p>
                 <p>Facebook Account</p>
             </div>
-        }
-
-        /* Merged Top Box with Email and Phone Buttons */
-        mergedTop={
-            <div className="button-container">
-                <p>Connect with us directly:</p>
-                <a href="mailto:info@chausobjekt.com">
-                    <img src="/email.png" alt="Email" />
-                </a>
-
-                <a href="tel:+1234567890">
-                    <img src="/phone.png" alt="Phone" />
-                </a>
-            </div>
-            
         }
         />
       </main>
