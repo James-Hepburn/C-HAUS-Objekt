@@ -511,106 +511,66 @@ body {
 }
 
 @media (max-width: 900px) {
-  .home-page .logo-box1 {
-    display: none;
+  .mobileBox {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 
-  .home-page .logo-merged-top {
-    display: block;
-    width: 80%;
-    max-width: 320px;
-    height: auto;
+  .mobileBox .logo-box1 {
+    width: 70%;
+    max-width: 300px;
     margin: 0 auto;
-    object-fit: contain;
+    display: block;
     position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
+    filter: brightness(1.05);
   }
 
-  .home-page .merged-bottom .mailing-list-full,
-  .home-page .merged-bottom .info-placeholder {
-    padding: 2rem 1.5rem;
+  .mobileBox .mailing-list-full {
+    width: 90%;
+    height: 100%;
+    padding: 2rem 1.2rem;
   }
 
-  .home-page .merged-bottom h2 {
-    font-size: 1.3rem;
+  .mobileBox .mailing-list-content h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
   }
 
-  .home-page .merged-bottom .close-btn {
-    top: 0.5rem;
-    right: 0.5rem;
-    width: 32px;
-    height: 32px;
-    font-size: 1.1rem;
-    background: white;
-    line-height: 1;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  .mobileBox .mailing-list-content input[type="email"] {
+    width: 90%;
+    max-width: 280px;
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
   }
 
-  .home-page .merged-bottom .close-btn:hover {
-    transform: scale(1.15);
-    color: #b98a1d;
+  .mobileBox .mailing-list-content button[type="submit"] {
+    padding: 0.6rem 1.4rem;
+    font-size: 1rem;
   }
 
-  .home-page .box1 .box1-content {
-    margin-top: 5.25rem;
-  }
-
-  .home-page .box1 h3 {
+  .mobileBox .close-btn {
+    top: 0.8rem;
+    right: 0.8rem;
+    width: 34px;
+    height: 34px;
     font-size: 1.2rem;
-    font-weight: 600;
-    color: #000;
   }
 
-  .home-page .box1 p {
-    color: #000;
-    font-weight: 300;
-    padding: 0.4rem;
+  .mobileBox .info-placeholder {
+    width: 90%;
+    height: 100%;
+    padding: 1.8rem 1.2rem;
   }
 
-  .home-page .box1 ul {
-    list-style: none;
-    margin: 1rem 0 0;
-    padding: 0;
-    text-align: left;
-    margin-left: 7px;
+  .mobileBox .info-placeholder h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
   }
 
-  .home-page .box1 li {
-    position: relative;
-    font-size: 0.7rem;
-    line-height: 1.6;
-    color: #111;
-    font-weight: 500;
-    margin-bottom: 0.7rem;
-    padding-left: 0.7rem;
-    transition: color 0.3s ease, transform 0.25s ease;
-  }
-
-  .home-page .box1 li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #00b1d2;
-    font-size: 0.7rem;
-    transition: transform 0.25s ease, color 0.3s ease;
-  }
-
-  .home-page .box1 li:hover {
-    color: #00b1d2;
-  }
-
-  .home-page .box1 li:hover::before {
-    color: #007ea6;
-  }
-
-  .home-page .box1 {
-    text-align: left !important;
-  }
-
-  .home-page .box1 h3 {
-    margin-left: 0.3rem;
+  .mobileBox .gold-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.05rem;
+    border-radius: 30px;
   }
 }

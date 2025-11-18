@@ -9,6 +9,7 @@ interface GridLayoutProps {
   box6?: React.ReactNode;
   mergedTop?: React.ReactNode;
   mergedBottom?: React.ReactNode;
+  mobileBox?: React.ReactNode;
 }
 
 export default function GridLayout({
@@ -20,10 +21,12 @@ export default function GridLayout({
   box6,
   mergedTop,
   mergedBottom,
+  mobileBox,
 }: GridLayoutProps) {
   return (
     <div className="content-container">
       <div className="box box1">{box1}</div>
+      <div className="box mobileBox">{mobileBox}</div>
 
       <div className="right-column">
         <div className="box box2">{box2}</div>
