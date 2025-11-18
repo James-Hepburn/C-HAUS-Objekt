@@ -1,4 +1,4 @@
-import "./GridLayout.css";
+import "./GridLayoutNew.css";
 
 interface GridLayoutProps {
   box1?: React.ReactNode;

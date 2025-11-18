@@ -22,7 +22,7 @@ export default function GridLayout({
   return (
     <div className="content-container">
       <div className="box box1">{box1}</div>
-      <div className="mobileBox">{mobileBox}</div>
+      <div className="box mobileBox">{mobileBox}</div>
 
       <div className="right-column">
         <div className="box box2">{box2}</div>
