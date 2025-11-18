@@ -51,6 +51,46 @@ export default function Services() {
       <main>
         {/* Grid Layout */}
         <GridLayout
+        /* Mobile Contnt */
+        mobileBox={
+            <div className="mobileBox-content">
+                <h3>Services</h3>
+                <p>
+                    At C.HAUS Objekt, we offer design and product services 
+                    that blend culture, creativity, and craftsmanship. Our 
+                    work extends beyond traditional gifting; we create meaningful, 
+                    story-driven designs that celebrate identity and connection.
+                </p>
+                <p>
+                    We specialize in:
+                </p>
+                <ul>
+                  <li>Custom Gift Design</li>
+                  <li>Brand & Organization Design</li>
+                  <li>Merchandise & Apparel</li>
+                  <li>Print & Stationery Design</li>
+                </ul>
+
+                <h3 className="mobile-section-title">T-Shirt Designs</h3>
+                <div className="mobile-carousel">
+                    <img
+                        src={images[currentIndex]}
+                        alt="Mobile T-Shirt"
+                        className="mobile-carousel-image"
+                        onClick={() => setIsLightboxOpen(true)}
+                    />
+                </div>
+
+                <h3 className="mobile-section-title">Business Card Design</h3>
+                <div className="mobile-business-card">
+                    <img
+                        src="/Business-Card.png"
+                        alt="Business Card"
+                        onClick={() => setIsCardLightboxOpen(true)}
+                    />
+                </div>
+            </div>
+        }
         /* Box1 with Text */
         box1={
             <div className="box1-content">
@@ -107,33 +147,6 @@ export default function Services() {
 
         /* Box6 with Business Card Example */
         box6={
-            <div className="box6-content">
-                <h3>Business Card Design</h3>
-                <img 
-                    src="/Business-Card.png" 
-                    alt="Business Card" 
-                    onClick={() => setIsCardLightboxOpen(true)} 
-                />
-            </div>
-        }
-
-        /* Merged Top Box with Carousel */
-        mergedTop={
-            <div className="carousel">
-                <div className="box2-content">
-                    <h3>T-Shirt Designs</h3>
-                    <img
-                        src={images[currentIndex]}
-                        alt={`Work ${currentIndex + 1}`}
-                        className="carousel-image"
-                        onClick={() => setIsLightboxOpen(true)}
-                    />
-                </div>
-            </div>
-        }
-
-        /* Merged Bottom Box with Image */
-        mergedBottom={
             <div className="box6-content">
                 <h3>Business Card Design</h3>
                 <img 

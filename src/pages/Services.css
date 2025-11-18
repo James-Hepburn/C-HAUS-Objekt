@@ -244,91 +244,120 @@ body {
 }
 
 @media (max-width: 900px) {
-  .services-page .box1 .box1-content {
-    margin-top: 8rem;
+  .mobileBox {
+    display: flex !important;
+    flex-direction: column;
+    overflow-y: auto;
   }
 
-  .services-page .box1 h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
+  .mobileBox-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    width: 100%;
+  }
+
+  .mobileBox-content h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
     color: #000;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
   }
 
-  .services-page .box1 p {
-    color: #000;
-    font-weight: 300;
-    padding: 0.4rem;
+  .mobileBox-content p {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: #222;
+    font-weight: 400;
+    margin: 0;
   }
 
-  .services-page .box1 ul {
+  .mobileBox-content ul {
     list-style: none;
-    margin: 1rem 0 0;
     padding: 0;
-    text-align: left;
-    margin-left: 7px;
+    margin: 0;
+    margin-top: -0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
   }
 
-  .services-page .box1 li {
-    position: relative;
-    font-size: 0.7rem;
-    line-height: 1.6;
-    color: #111;
+  .mobileBox-content li {
+    font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 0.7rem;
-    padding-left: 0.7rem;
-    transition: color 0.3s ease, transform 0.25s ease;
+    color: #000;
+    padding-left: 1.4rem;
+    position: relative;
+    line-height: 1.4;
   }
 
-  .services-page .box1 li::before {
+  .mobileBox-content li::before {
     content: "•";
     position: absolute;
     left: 0;
     top: 0;
     color: #00b1d2;
-    font-size: 0.7rem;
-    transition: transform 0.25s ease, color 0.3s ease;
+    font-size: 1.25rem;
+    line-height: 1rem;
   }
 
-  .services-page .box1 li:hover {
+  .mobileBox-content li:hover {
     color: #00b1d2;
   }
 
-  .services-page .box1 li:hover::before {
+  .mobileBox-content li:hover::before {
     color: #007ea6;
   }
 
-  .services-page .box2-content h3 {
-    font-size: 1rem;
+  .lightbox-image {
+    max-width: 94vw;
+    max-height: 85vh;
   }
 
-  .services-page .box6-content {
-    position: relative;
+  .mobile-section-title {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #000;
+  }
+
+  .mobile-carousel {
     width: 100%;
-    height: 100%;
+    height: 380px;       
+    position: relative;
     overflow: hidden;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 14px;
-    background-color: #335644; 
+    background-color: white;
   }
 
-  .services-page .box6-content img {
+  .mobile-carousel-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; 
-    object-position: center;
-    border-radius: 14px;
-    background-color: #335644; 
-  }
-
-  .services-page .box6-content h3 {
-    font-size: 1rem;
-    top: -8.5rem;
+    object-fit: contain;    
+    position: absolute;
+    top: 0;
     left: 0;
   }
 
-  .services-page .box1 h3 {
-    margin-left: 0.3rem;
+  .mobile-business-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile-business-card img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow:
+      0 8px 18px rgba(0,0,0,0.25),
+      0 0 10px rgba(212,175,55,0.25);
+    cursor: zoom-in;
   }
 }
