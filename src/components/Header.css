@@ -90,13 +90,16 @@
   transition: all 0.3s ease;
   z-index: 1100;
   margin-right: 4.5rem; 
-  background: linear-gradient(135deg, #00b1d2, #007ea6, #4cd3f0);
-  animation: shimmerBlue 3s ease-in-out infinite;
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.25),
-    0 0 8px rgba(0, 177, 210, 0.4);
-}
+  padding: 0.6rem 1.5rem;
+  color: #fffdf2;
+  font-weight: 600;
 
+  background: rgba(255, 255, 255, 0.08); 
+  backdrop-filter: blur(12px);          
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
 
 .bar {
   width: 15px;
@@ -120,7 +123,7 @@
 .nav-menu {
   position: fixed;
   top: 130px;
-  right: 65px;
+  right: 60px;
   width: 200px;
   display: flex;
   flex-direction: column;
@@ -157,28 +160,12 @@
   animation: shimmerBlueHover 3s ease-in-out infinite;
 }
 
-.menu-toggle {
-  transition: color 0.3s ease;
-  background: linear-gradient(135deg, #00b1d2, #007ea6, #4cd3f0);
-  animation: shimmerBlue 3s ease-in-out infinite;
-  box-shadow:
-      0 4px 12px rgba(0, 0, 0, 0.25),
-      0 0 8px rgba(212, 175, 55, 0.3);
-  border: none;
-  padding: 0.6rem 1.5rem;
-  color: #fffdf2;
-  cursor: pointer;
-  font-weight: 600;
-}
-
 .menu-toggle:hover {
-  background: linear-gradient(135deg, #4cd3f0, #00b1d2, #009fc1);
-  color: #fff;
-  transform: translateY(-2px) scale(1.07);
-  box-shadow:
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 
     0 10px 22px rgba(0, 177, 210, 0.6),
     0 0 14px rgba(76, 211, 240, 0.8);
-  animation: shimmerBlueHover 3s ease-in-out infinite;
 }
 
 @keyframes shimmerBlue {
