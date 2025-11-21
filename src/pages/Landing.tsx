@@ -119,7 +119,7 @@ export default function Landing() {
           transition: { duration: 0.8, ease: "easeInOut" },
         });
 
-        await new Promise((resolve) => setTimeout(resolve, 5000));
+        await new Promise((resolve) => setTimeout(resolve, 10000));
 
         navigate("/home");
       }, 3200);
@@ -212,39 +212,17 @@ export default function Landing() {
             initial={{ opacity: 0 }}
             animate={motto}
           >
-            {window.innerWidth <= 900 ? (
-              <>
-                <p className="motto-line">
-                  <span className="word pink">timeless culture</span>
-                </p>
-                <p className="motto-line">
-                  <span className="word blue">objects to gift</span>
-                </p>
-                <p className="motto-line">
-                  <span className="word yellow">designs to keep</span>
-                </p>
-              </>
-            ) : (
-              <>
-                <p className="motto-line">
-                  <span className="word pink">timeless culture</span>
-                  <span className="word">objects to gift</span>
-                  <span className="word">designs to keep</span>
-                </p>
-
-                <p className="motto-line">
-                  <span className="word">timeless culture</span>
-                  <span className="word blue">objects to gift</span>
-                  <span className="word">designs to keep</span>
-                </p>
-
-                <p className="motto-line">
-                  <span className="word">timeless culture</span>
-                  <span className="word">objects to gift</span>
-                  <span className="word yellow">designs to keep</span>
-                </p>
-              </>
-            )}
+            <>
+              <p className="motto-line">
+                <span className="word pink">timeless culture</span>
+              </p>
+              <p className="motto-line">
+                <span className="word blue">objects to gift</span>
+              </p>
+              <p className="motto-line">
+                <span className="word yellow">designs to keep</span>
+              </p>
+            </>
           </motion.div>
 
           <motion.div
