@@ -164,9 +164,10 @@ export default function Contact() {
             <div className="box6-content">
                 <h3>Connect With Us</h3>
                 <p>info@chausobjekt.com</p>
-                <p>Instagram Account</p>
+                <p>Other social media coming soon!</p>
+                {/* <p>Instagram Account</p>
                 <p>Twitter Account</p>
-                <p>Facebook Account</p>
+                <p>Facebook Account</p> */}
             </div>
         }
         />

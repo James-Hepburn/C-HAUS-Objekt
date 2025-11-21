@@ -14,6 +14,8 @@ export default function Landing() {
   const bg: AnimControls = useAnimation();
   const msg: AnimControls = useAnimation();
 
+  const confettiColors = ["#000", "#fff", "#ff2ea6", "#3cb8ff", "#ffbe4b"];
+
   const [confettiPieces, setConfettiPieces] = useState<
     {
       id: number;
@@ -41,9 +43,9 @@ export default function Landing() {
           const pieces = Array.from({ length: 40 }).map((_, i) => ({
             id: i,
             left: `${Math.random() * 100}%`,
-            size: Math.random() * 8 + 4,
+            size: Math.random() * 14 + 10,
             delay: Math.random() * 0.3,
-            color: Math.random() > 0.5 ? "#000" : "#fff",
+            color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
             x: (Math.random() - 0.5) * 200,
             y: -Math.random() * 200 - 150,
             rotate: Math.random() * 720 - 360,
