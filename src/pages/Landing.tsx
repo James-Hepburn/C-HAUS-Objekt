@@ -13,6 +13,7 @@ export default function Landing() {
   const motto: AnimControls = useAnimation();
   const bg: AnimControls = useAnimation();
   const msg: AnimControls = useAnimation();
+  const ballMsg: AnimControls = useAnimation();
 
   const confettiColors = ["#000", "#fff", "#ff2ea6", "#3cb8ff", "#ffbe4b"];
 
@@ -108,7 +109,17 @@ export default function Landing() {
           transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] }
         });
 
-        await new Promise((resolve) => setTimeout(resolve, 1500));
+        await motto.start({
+          opacity: 0,
+          transition: { duration: 0.6, ease: "easeInOut" },
+        });
+
+        await ballMsg.start({
+          opacity: 1,
+          transition: { duration: 0.8, ease: "easeInOut" },
+        });
+
+        await new Promise((resolve) => setTimeout(resolve, 5000));
 
         navigate("/home");
       }, 3200);
@@ -121,7 +132,7 @@ export default function Landing() {
       window.removeEventListener("scroll", trigger);
       window.removeEventListener("click", trigger);
     };
-  }, [navigate, lid, base, name, motto, bg, msg]);
+  }, [navigate, lid, base, name, motto, bg, msg, ballMsg]);
 
   return (
     <motion.div
@@ -234,6 +245,22 @@ export default function Landing() {
                 </p>
               </>
             )}
+          </motion.div>
+
+          <motion.div
+            className="landing-message"
+            initial={{ opacity: 0 }}
+            animate={ballMsg}
+          >
+            <p>
+              The Fortune Ball in support of Markham Stouffville Hospital
+              Foundation will take place on Saturday, November 22, 2025 at the
+              Hilton Toronto/Markham Suites &amp; Conference Centre.
+            </p>
+            <p style={{ marginTop: "1rem" }}>
+              We are grateful to have contributed and wish all guests a delightful
+              and memorable evening at the ball.
+            </p>
           </motion.div>
         </motion.div>
       </div>
