@@ -12,7 +12,7 @@ export default function Footer() {
       </button>
       <p>info@chausobjekt.com</p>
 
-      <div className="social-icons">
+      {/* <div className="social-icons">
         <a href="https://instagram.com" target="_blank" rel="noreferrer">
           <i className="fa-brands fa-instagram"></i>
         </a>
@@ -22,7 +22,7 @@ export default function Footer() {
         <a href="https://facebook.com" target="_blank" rel="noreferrer">
           <i className="fa-brands fa-facebook"></i>
         </a>
-      </div>
+      </div> */}
     </footer>
   );
 }
