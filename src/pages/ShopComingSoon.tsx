@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -26,29 +27,29 @@ export default function ShopComingSoon() {
   const [showMessage, setShowMessage] = useState(false);
   const lids: AnimControls[] = [useAnimation(), useAnimation(), useAnimation()];
 
-  useEffect(() => {
-    const savedWinner = localStorage.getItem("winnerBoxIndex");
-    const savedOpened = localStorage.getItem("openedBoxIndex");
+  // useEffect(() => {
+  //   const savedWinner = localStorage.getItem("winnerBoxIndex");
+  //   const savedOpened = localStorage.getItem("openedBoxIndex");
 
-    if (savedWinner !== null) {
-      setWinnerBox(Number(savedWinner));
-      setShowMessage(true);
-    }
-    if (savedOpened !== null) {
-      setActiveBox(Number(savedOpened));
-    }
+  //   if (savedWinner !== null) {
+  //     setWinnerBox(Number(savedWinner));
+  //     setShowMessage(true);
+  //   }
+  //   if (savedOpened !== null) {
+  //     setActiveBox(Number(savedOpened));
+  //   }
 
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key.toLowerCase() === "r") {
-        localStorage.removeItem("winnerBoxIndex");
-        localStorage.removeItem("openedBoxIndex");
-        window.location.reload();
-      }
-    };
+  //   const handleKeyDown = (e: KeyboardEvent) => {
+  //     if (e.key.toLowerCase() === "r") {
+  //       localStorage.removeItem("winnerBoxIndex");
+  //       localStorage.removeItem("openedBoxIndex");
+  //       window.location.reload();
+  //     }
+  //   };
 
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  //   window.addEventListener("keydown", handleKeyDown);
+  //   return () => window.removeEventListener("keydown", handleKeyDown);
+  // }, []);
 
   const createConfetti = (color: string, index: number) => {
     const pieces: ConfettiPiece[] = Array.from({ length: 40 }).map((_, i) => ({
@@ -71,7 +72,8 @@ export default function ShopComingSoon() {
   };
 
   const openBox = (index: number, color: string) => {
-    if (activeBox !== null || localStorage.getItem("openedBoxIndex") !== null) return;
+    // if (activeBox !== null || localStorage.getItem("openedBoxIndex") !== null) return;
+    if (activeBox !== null) return;
 
     const roll = Math.random();
     let rewardValue;
@@ -87,7 +89,7 @@ export default function ShopComingSoon() {
     setReward(rewardValue);
     setWinnerBox(index); 
 
-    localStorage.setItem("openedBoxIndex", index.toString());
+    // localStorage.setItem("openedBoxIndex", index.toString());
     setActiveBox(index);
 
     const clickedBox = document.querySelector(`.gift-box-${index + 1}`);
