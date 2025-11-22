@@ -281,12 +281,12 @@
 
 @media (max-width: 900px) {
   .skip-button {
-    bottom: 20px;
+    bottom: 90px !important; 
     right: 20px;
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
   }
-  
+
   .landing-message {
     font-size: 1.4rem;
     width: 90vw;
