@@ -17,6 +17,8 @@ export default function Landing() {
 
   const confettiColors = ["#000", "#fff", "#ff2ea6", "#3cb8ff", "#ffbe4b"];
 
+  const [showSkip, setShowSkip] = useState(false);
+
   const [confettiPieces, setConfettiPieces] = useState<
     {
       id: number;
@@ -124,6 +126,8 @@ export default function Landing() {
           opacity: 1,
           transition: { duration: 0.8, ease: "easeInOut" },
         });
+
+        setShowSkip(true);
 
         await new Promise((resolve) => setTimeout(resolve, 10000));
 
@@ -255,6 +259,12 @@ export default function Landing() {
       <motion.div className="down-arrow" animate={msg}>
         ↓
       </motion.div>
+      <button
+        className={`skip-button ${showSkip ? "show" : ""}`}
+        onClick={() => navigate("/home")}
+      >
+        Skip →
+      </button>
     </motion.div>
   );
 }
