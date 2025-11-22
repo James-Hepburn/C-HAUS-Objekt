@@ -55,23 +55,35 @@ body {
   margin: 0;
   color: #fff;
   transition: color 0.3s ease;
-  background: linear-gradient(135deg, #00b1d2, #007ea6, #4cd3f0);
+  background: linear-gradient(
+      135deg,
+      #F47A42,
+      #d8632b,
+      #ff9b58,
+      #F47A42
+  );
   animation: shimmerBlue 3s ease-in-out infinite;
   box-shadow:
       0 4px 12px rgba(0, 0, 0, 0.25),
-      0 0 8px rgba(212, 175, 55, 0.3);
+      0 0 12px rgba(244, 122, 66, 0.45);
   font-size: xx-large;
 }
 
 .home-page .box4 button:hover,
 .home-page .box5 button:hover {
   transform: scale(1.04);
-  background: linear-gradient(135deg, #4cd3f0, #00b1d2, #009fc1);
+  background: linear-gradient(
+      135deg,
+      #ffb37e,
+      #F47A42,
+      #d8632b,
+      #ff9b58
+  );
   color: #fff;
   transform: translateY(-2px) scale(1.07);
   box-shadow:
-    0 10px 22px rgba(0, 177, 210, 0.6),
-    0 0 14px rgba(76, 211, 240, 0.8);
+    0 10px 22px rgba(244, 122, 66, 0.55),
+    0 0 18px rgba(255, 150, 90, 0.75);
   animation: shimmerBlueHover 3s ease-in-out infinite;
 }
 
@@ -384,8 +396,8 @@ body {
 }
 
 .close-btn:hover {
-  color: #00b1d2;
-  border-color: #00b1d2;
+  color: #F47A42;
+  border-color: #F47A42;
   transform: scale(1.2);
 }
 
@@ -410,7 +422,7 @@ body {
   max-width: 320px;
   padding: 0.8rem 1rem;
   border-radius: 30px;
-  border: 2px solid #00b1d2;
+  border: 2px solid #F47A42;
   font-size: 1rem;
   outline: none;
   color: #333;
@@ -422,7 +434,7 @@ body {
 }
 
 .mailing-list-content input[type="email"]:focus {
-  border-color: #00b1d2;
+  border-color: #F47A42;
   box-shadow:
       0 4px 12px rgba(0, 0, 0, 0.25),
       0 0 8px rgba(212, 175, 55, 0.3);
@@ -439,21 +451,32 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: color 0.3s ease;
-  background: linear-gradient(135deg, #00b1d2, #007ea6, #4cd3f0);
   animation: shimmerBlue 3s ease-in-out infinite;
+  background: linear-gradient(
+      135deg,
+      #F47A42,
+      #d8632b,
+      #ff9b58,
+      #F47A42
+  );
   box-shadow:
       0 4px 12px rgba(0, 0, 0, 0.25),
-      0 0 8px rgba(212, 175, 55, 0.3);
+      0 0 12px rgba(244, 122, 66, 0.45);
 }
 
 .mailing-list-content button[type="submit"]:hover {
   transform: translateY(-2px) scale(1.07);
-  background: linear-gradient(135deg, #4cd3f0, #00b1d2, #009fc1);
   color: #fff;
-  transform: translateY(-2px) scale(1.07);
+  background: linear-gradient(
+      135deg,
+      #ffb37e,
+      #F47A42,
+      #d8632b,
+      #ff9b58
+  );
   box-shadow:
-    0 10px 22px rgba(0, 177, 210, 0.6),
-    0 0 14px rgba(76, 211, 240, 0.8);
+    0 10px 22px rgba(244, 122, 66, 0.55),
+    0 0 18px rgba(255, 150, 90, 0.75);
   animation: shimmerBlueHover 3s ease-in-out infinite;
 }
 
@@ -482,7 +505,6 @@ body {
 }
 
 .gold-btn {
-  background: linear-gradient(135deg, #e2c35d, #caa432, #f0d879);
   background-size: 200% 200%;
   color: #fffdf2;
   border: none;
@@ -492,21 +514,32 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: color 0.3s ease;
-  background: linear-gradient(135deg, #00b1d2, #007ea6, #4cd3f0);
   animation: shimmerBlue 3s ease-in-out infinite;
+  background: linear-gradient(
+      135deg,
+      #F47A42,
+      #d8632b,
+      #ff9b58,
+      #F47A42
+  );
   box-shadow:
       0 4px 12px rgba(0, 0, 0, 0.25),
-      0 0 8px rgba(212, 175, 55, 0.3);
+      0 0 12px rgba(244, 122, 66, 0.45);
 }
 
 .gold-btn:hover {
-  transform: translateY(-2px) scale(1.07);
-  background: linear-gradient(135deg, #4cd3f0, #00b1d2, #009fc1);
   color: #fff;
   transform: translateY(-2px) scale(1.07);
+  background: linear-gradient(
+      135deg,
+      #ffb37e,
+      #F47A42,
+      #d8632b,
+      #ff9b58
+  );
   box-shadow:
-    0 10px 22px rgba(0, 177, 210, 0.6),
-    0 0 14px rgba(76, 211, 240, 0.8);
+    0 10px 22px rgba(244, 122, 66, 0.55),
+    0 0 18px rgba(255, 150, 90, 0.75);
   animation: shimmerBlueHover 3s ease-in-out infinite;
 }
 
