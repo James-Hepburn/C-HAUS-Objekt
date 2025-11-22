@@ -72,6 +72,12 @@ export default function Landing() {
         transition: { delay: 1.5, duration: 0.8 },
       });
 
+      base.start({
+        backgroundColor: "#000",
+        backgroundImage: "none",
+        transition: { delay: 1.5, duration: 0.5, ease: "easeInOut" }
+      });
+
       bg.start({
         opacity: 1,
         transition: {
