@@ -9,9 +9,12 @@ import Contact from "./pages/Contact";
 
 import Grid from "./pages/Grid";
 
+import Analytics from "./Analytics";
+
 export default function App() {
   return (
     <Router>
+      <Analytics />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />
