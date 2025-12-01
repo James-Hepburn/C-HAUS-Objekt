@@ -14,7 +14,7 @@ import Analytics from "./Analytics";
 export default function App() {
   return (
     <Router>
-      <Analytics />
+      {/* <Analytics /> */}
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />

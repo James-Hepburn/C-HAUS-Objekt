@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className={`header ${menuOpen ? "menu-open" : ""}`}>
       <div className="header-left" onClick={() => navigate("/home")}>
-        <img src="/Logo-Wide.png" alt="Logo" className="header-logo" />
+        <img src="/Logo-Wide-Transparent.png" alt="Logo" className="header-logo" />
       </div>
 
       <button

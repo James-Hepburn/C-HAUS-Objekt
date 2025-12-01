@@ -122,14 +122,14 @@ export default function Landing() {
           transition: { duration: 0.6, ease: "easeInOut" },
         });
 
-        await ballMsg.start({
-          opacity: 1,
-          transition: { duration: 0.8, ease: "easeInOut" },
-        });
+        // await ballMsg.start({
+        //   opacity: 1,
+        //   transition: { duration: 0.8, ease: "easeInOut" },
+        // });
 
         setShowSkip(true);
 
-        await new Promise((resolve) => setTimeout(resolve, 10000));
+        // await new Promise((resolve) => setTimeout(resolve, 10000));
 
         navigate("/home");
       }, 3200);

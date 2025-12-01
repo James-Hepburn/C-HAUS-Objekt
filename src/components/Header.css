@@ -29,6 +29,11 @@
     0 6px 14px rgba(0, 0, 0, 0.3),
     inset 0 0 12px rgba(255, 255, 255, 0.15);
   transition: all 0.4s ease;
+
+  background: rgba(255, 255, 255, 0.08); 
+  backdrop-filter: blur(12px);          
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
 
 .header-logo::before {
@@ -68,7 +73,7 @@
   align-items: center; 
   gap: 6px;
   width: 50px;
-  height: 70px;
+  height: 50px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
