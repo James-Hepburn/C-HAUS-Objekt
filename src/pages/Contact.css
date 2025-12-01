@@ -206,6 +206,12 @@ body {
   color: #000;
 }
 
+.contact-page .box6 p a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 @keyframes shimmerBlue {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -299,6 +305,17 @@ body {
       0 10px 22px rgba(244, 122, 66, 0.55),
       0 0 18px rgba(255, 150, 90, 0.75);
     animation: shimmerBlueHover 3s ease-in-out infinite;
+  }
+
+  .mobileBox-content a i,
+  .mobileBox-content a i:hover {
+    line-height: 1.25;
+    font-size: 2rem;
+    color: #ff9b58;
+    background-color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
   }
 
   .overlay {

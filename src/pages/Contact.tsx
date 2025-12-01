@@ -90,13 +90,23 @@ export default function Contact() {
                 )}
 
                 <div className="button-container">
-                <p>Connect with us directly:</p>
+                <p>Connect With Us</p>
                 <a href="mailto:info@chausobjekt.com">
                     <img src="/email.png" alt="Email" />
                 </a>
 
                 <a href="tel:+1234567890">
                     <img src="/phone.png" alt="Phone" />
+                </a>
+
+                <a href="https://www.instagram.com/chausobjekt/" target="_blank" rel="noreferrer">
+                    <i className="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://x.com/chausobjekt" target="_blank" rel="noreferrer">
+                    <i className="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61584122593556" target="_blank" rel="noreferrer">
+                    <i className="fa-brands fa-facebook"></i>
                 </a>
             </div>
             </div>
@@ -164,10 +174,21 @@ export default function Contact() {
             <div className="box6-content">
                 <h3>Connect With Us</h3>
                 <p>info@chausobjekt.com</p>
-                <p>Other social media coming soon!</p>
-                {/* <p>Instagram Account</p>
-                <p>Twitter Account</p>
-                <p>Facebook Account</p> */}
+                <p>
+                    <a href="https://www.instagram.com/chausobjekt/" target="_blank" rel="noreferrer">
+                    Instagram
+                    </a>
+                </p>
+                <p>
+                    <a href="https://x.com/chausobjekt" target="_blank" rel="noreferrer">
+                    Twitter
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.facebook.com/profile.php?id=61584122593556" target="_blank" rel="noreferrer">
+                    Facebook
+                    </a>
+                </p>
             </div>
         }
         />

@@ -12,17 +12,17 @@ export default function Footer() {
       </button>
       <p>info@chausobjekt.com</p>
 
-      {/* <div className="social-icons">
-        <a href="https://instagram.com" target="_blank" rel="noreferrer">
+      <div className="social-icons">
+        <a href="https://www.instagram.com/chausobjekt/" target="_blank" rel="noreferrer">
           <i className="fa-brands fa-instagram"></i>
         </a>
-        <a href="https://x.com" target="_blank" rel="noreferrer">
+        <a href="https://x.com/chausobjekt" target="_blank" rel="noreferrer">
           <i className="fa-brands fa-x-twitter"></i>
         </a>
-        <a href="https://facebook.com" target="_blank" rel="noreferrer">
+        <a href="https://www.facebook.com/profile.php?id=61584122593556" target="_blank" rel="noreferrer">
           <i className="fa-brands fa-facebook"></i>
         </a>
-      </div> */}
+      </div>
     </footer>
   );
 }
