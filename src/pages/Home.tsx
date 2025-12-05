@@ -44,9 +44,12 @@ export default function Home() {
     e.preventDefault();
 
     try {
-      const res = await fetch("/api/subscribe", {
+      const res = await fetch("https://script.google.com/macros/s/AKfycby2hqyIXFn5Qhje6cdJm0ZGv3SSNWt31b-ISOUNXl1c-vK26sRZqwgxHT_tiswrKfNVAg/exec", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
         body: JSON.stringify({ email }),
       });
 
