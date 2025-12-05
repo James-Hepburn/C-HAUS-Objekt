@@ -371,7 +371,7 @@ main {
   z-index: 9999;
 }
 
-.landing-bow {
+.shop-coming-soon .landing-bow {
   position: relative;
   top: -20px;
   display: flex;
@@ -379,40 +379,40 @@ main {
   align-items: center;
 }
 
-.landing-bow-left,
-.landing-bow-right {
+.shop-coming-soon .landing-bow-left,
+.shop-coming-soon .landing-bow-right {
   width: 40px;
   height: 25px;
   border-radius: 50%;
   border-color: currentColor;
 }
 
-.landing-bow-left {
+.shop-coming-soon .landing-bow-left {
   transform: rotate(50deg);
   margin-right: -15px;
 }
 
-.landing-bow-right {
+.shop-coming-soon .landing-bow-right {
   transform: rotate(-50deg);
   margin-left: -15px;
 }
 
 @media screen and (max-width: 900px) {
-  .landing-bow {
+  .shop-coming-soon .landing-bow {
     top: -30px;
   }
 
-  .landing-bow-left,
-  .landing-bow-right {
+  .shop-coming-soon .landing-bow-left,
+  .shop-coming-soon .landing-bow-right {
     width: 40px;
     height: 25px;
   }
 
-  .landing-bow-left {
+  .shop-coming-soon .landing-bow-left {
     margin-right: -10px;
   }
 
-  .landing-bow-right {
+  .shop-coming-soon .landing-bow-right {
     margin-left: -10px;
   }
 
