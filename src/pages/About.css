@@ -95,7 +95,7 @@ body {
 }
 
 .about-page .box3 h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .about-page .box1 p,
@@ -121,6 +121,12 @@ body {
 .about-page .box2 h3,
 .about-page .box2 p {
   margin-left: 1.5rem;
+}
+
+.about-page .box1 p {
+  border-bottom: 1px solid #000;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 /* Box6 with List */

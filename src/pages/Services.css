@@ -38,7 +38,7 @@ body {
 }
 
 .services-page .box6-content h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   color: black;
   margin-bottom: 3rem;
@@ -46,7 +46,7 @@ body {
   z-index: 2;
   position: relative;
   top: -8rem;
-  right: -5.5rem;
+  right: -7rem;
 }
 
 .services-page .box6-content img {
@@ -126,7 +126,7 @@ body {
 }
 
 .services-page .box2-content h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #000;
   margin-bottom: 0.5rem;  
@@ -196,7 +196,7 @@ body {
 
 /* Box1 with Text */
 .services-page .box1 h3 {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: #000;
 }
@@ -205,6 +205,7 @@ body {
   color: #000;
   font-weight: 300;
   padding: 1rem;
+  font-size: 1.3rem;
 }
 
 .services-page .box1 {
@@ -220,17 +221,17 @@ body {
   margin: 1rem 0 0;
   padding: 0;
   text-align: left;
-  margin-left: 100px;
+  margin-left: 50px;
 }
 
 .services-page .box1 li {
   position: relative;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   color: #111;
   font-weight: 500;
   margin-bottom: 0.7rem;
-  padding-left: 1.8rem;
+  padding-left: 1.5rem;
   transition: color 0.3s ease, transform 0.25s ease;
 }
 
