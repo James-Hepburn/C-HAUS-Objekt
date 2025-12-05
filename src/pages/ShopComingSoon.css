@@ -22,7 +22,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   overflow-x: hidden;  
-  background-color: #404040;
+  background-color: #404040 !important;
 }
 
 :root {
@@ -106,6 +106,12 @@ main {
   bottom: 0;
   height: 90px;
   z-index: 1;
+  background-image:
+  url("/gift-box.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000;
 }
 
 .gift-box-1 .gift-lid,
@@ -181,11 +187,13 @@ main {
   }
 }
 
-.gift-box.opened .gift-lid {
+.gift-box.opened .gift-lid,
+.gift-box.opened .gift-lid-container {
   animation: none !important;
   pointer-events: none;
   opacity: 0; 
   transform: translateY(-100vh); 
+  transition: opacity 0.3s ease, transform 1.4s ease;
 }
 
 .gift-box:not(.opened):not(.animating):hover .gift-lid {
@@ -363,7 +371,51 @@ main {
   z-index: 9999;
 }
 
+.landing-bow {
+  position: relative;
+  top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-bow-left,
+.landing-bow-right {
+  width: 40px;
+  height: 25px;
+  border-radius: 50%;
+  border-color: currentColor;
+}
+
+.landing-bow-left {
+  transform: rotate(50deg);
+  margin-right: -15px;
+}
+
+.landing-bow-right {
+  transform: rotate(-50deg);
+  margin-left: -15px;
+}
+
 @media screen and (max-width: 900px) {
+  .landing-bow {
+    top: -30px;
+  }
+
+  .landing-bow-left,
+  .landing-bow-right {
+    width: 40px;
+    height: 25px;
+  }
+
+  .landing-bow-left {
+    margin-right: -10px;
+  }
+
+  .landing-bow-right {
+    margin-left: -10px;
+  }
+
   .winner-message {
     position: relative;
     top: -20px;

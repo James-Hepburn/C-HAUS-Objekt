@@ -105,7 +105,7 @@ export default function Contact() {
                 <a href="https://x.com/chausobjekt" target="_blank" rel="noreferrer">
                     <i className="fa-brands fa-x-twitter"></i>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61584122593556" target="_blank" rel="noreferrer">
+                <a href="https://www.facebook.com/chausobjekt" target="_blank" rel="noreferrer">
                     <i className="fa-brands fa-facebook"></i>
                 </a>
             </div>

@@ -70,7 +70,7 @@ export default function Home() {
 
   return (
     <motion.div
-      className="home-page"
+      className="home-page data-scroll-container"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

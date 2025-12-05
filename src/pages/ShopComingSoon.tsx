@@ -201,14 +201,19 @@ export default function ShopComingSoon() {
                     }}
                   />
                 ))}
+
               <motion.div
-                className={`gift-lid ${activeBox === index ? "lid-open" : ""}`}
+                className={`gift-lid-container ${activeBox === index ? "lid-open" : ""}`}
                 animate={lids[index]}
-                style={{
-                  transformOrigin: "center bottom",
-                  backgroundColor: color,
-                }}
-              />
+                style={{ transformOrigin: "center bottom" }}
+              >
+                <div className="gift-lid" style={{ backgroundColor: color }} />
+
+                <div className="landing-bow">
+                  <div className="landing-bow-left" />
+                  <div className="landing-bow-right" />
+                </div>
+              </motion.div>
               <div className="gift-base" style={{ backgroundColor: color }} />
             </div>
           ))}

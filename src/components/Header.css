@@ -18,7 +18,7 @@
 
 .header-logo {
   width: 150px;
-  height: 70px;
+  height: 60px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -30,10 +30,11 @@
     inset 0 0 12px rgba(255, 255, 255, 0.15);
   transition: all 0.4s ease;
 
-  background: rgba(255, 255, 255, 0.08); 
+  background: linear-gradient(135deg, var(--pantone-7527), var(--pantone-571)); 
   backdrop-filter: blur(12px);          
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  padding: 0.3rem;
 }
 
 .header-logo::before {
