@@ -209,9 +209,9 @@ export default function ShopComingSoon() {
               >
                 <div className="gift-lid" style={{ backgroundColor: color }} />
 
-                <div className="shop-coming-soon landing-bow">
-                  <div className="shop-coming-soon landing-bow-left" />
-                  <div className="shop-coming-soon landing-bow-right" />
+                <div className="bow">
+                  <div className="bow-left" />
+                  <div className="bow-right" />
                 </div>
               </motion.div>
               <div className="gift-base" style={{ backgroundColor: color }} />
