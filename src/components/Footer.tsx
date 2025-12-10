@@ -6,7 +6,6 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      <p>Questions?</p>
       <button onClick={() => navigate("/contact")} className="footer-btn">
         Contact Us
       </button>

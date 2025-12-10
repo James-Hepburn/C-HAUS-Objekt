@@ -26,7 +26,7 @@ function AnimatedRoutes() {
   return (
     <>
       <ScrollToTop /> 
-      <Analytics />
+      {/* <Analytics /> */}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Landing />} />
