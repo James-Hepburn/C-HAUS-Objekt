@@ -239,8 +239,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: var(--font-primary);
-  color: #A27B42;
+  font-family: "Ewert", serif;
+  color: white;
   text-align: center;
   max-width: 80vw;
   line-height: 1.5;

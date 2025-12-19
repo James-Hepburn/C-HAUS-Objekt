@@ -13,7 +13,7 @@ export default function Landing() {
   const motto: AnimControls = useAnimation();
   const bg: AnimControls = useAnimation();
   const msg: AnimControls = useAnimation();
-  const ballMsg: AnimControls = useAnimation();
+  const message: AnimControls = useAnimation();
 
   const confettiColors = ["#000", "#fff", "#ff2ea6", "#3cb8ff", "#ffbe4b"];
 
@@ -119,17 +119,17 @@ export default function Landing() {
 
         await motto.start({
           opacity: 0,
-          transition: { duration: 0.6, ease: "easeInOut" },
+          transition: { duration: 1, ease: "easeInOut" },
         });
 
-        // await ballMsg.start({
-        //   opacity: 1,
-        //   transition: { duration: 0.8, ease: "easeInOut" },
-        // });
+        await message.start({
+          opacity: 1,
+          transition: { duration: 0.8, ease: "easeInOut" },
+        });
 
         setShowSkip(true);
 
-        // await new Promise((resolve) => setTimeout(resolve, 10000));
+        await new Promise((resolve) => setTimeout(resolve, 10000));
 
         navigate("/home");
       }, 3200);
@@ -142,7 +142,7 @@ export default function Landing() {
       window.removeEventListener("scroll", trigger);
       window.removeEventListener("click", trigger);
     };
-  }, [navigate, lid, base, name, motto, bg, msg, ballMsg]);
+  }, [navigate, lid, base, name, motto, bg, msg, message]);
 
   return (
     <motion.div
@@ -238,16 +238,16 @@ export default function Landing() {
           <motion.div
             className="landing-message"
             initial={{ opacity: 0 }}
-            animate={ballMsg}
+            animate={message}
           >
             <p>
-              The Fortune Ball in support of Markham Stouffville Hospital
-              Foundation will take place on Saturday, November 22, 2025 at the
-              Hilton Toronto/Markham Suites &amp; Conference Centre.
+              WARMEST WISHES FROM C. HAUS OBJEKT.
             </p>
             <p style={{ marginTop: "1rem" }}>
-              We are grateful to have contributed and wish all guests a delightful
-              and memorable evening at the ball.
+              CELEBRATE THE SEASON WITH ARTFUL LIVING AND CURATED DESIGN.
+            </p>
+            <p style={{ marginTop: "1rem" }}>
+              OUR WEBSITE LAUNCHES SOON -- STAY TUNED.
             </p>
           </motion.div>
         </motion.div>
