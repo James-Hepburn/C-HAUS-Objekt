@@ -122,6 +122,12 @@ export default function Landing() {
           transition: { duration: 1, ease: "easeInOut" },
         });
 
+        await base.start({
+          backgroundImage: "none",
+          backgroundColor: "#0a422c",
+          transition: { duration: 1, ease: "easeInOut" },
+        });
+
         await message.start({
           opacity: 1,
           transition: { duration: 0.8, ease: "easeInOut" },
