@@ -123,7 +123,7 @@ export default function Landing() {
         });
 
         await base.start({
-          backgroundImage: "none",
+          backgroundImage: "none !important",
           backgroundColor: "#0a422c",
           transition: { duration: 1, ease: "easeInOut" },
         });
