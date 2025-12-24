@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "./Landing.css";
 
 export default function Landing() {
   const navigate = useNavigate();
+
+  const baseRef = useRef<HTMLDivElement>(null);
 
   type AnimControls = ReturnType<typeof useAnimation>;
   const lid: AnimControls = useAnimation();
@@ -117,6 +119,8 @@ export default function Landing() {
           transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] }
         });
 
+        baseRef.current?.classList.add("opened");
+
         await motto.start({
           opacity: 0,
           transition: { duration: 1, ease: "easeInOut" },
@@ -222,7 +226,7 @@ export default function Landing() {
           C. HAUS <span className="mobile-break">Objekt</span>
         </motion.div>
 
-        <motion.div className="landing-gift-base" animate={base}>
+        <motion.div className="landing-gift-base" ref={baseRef} animate={base}>
           <motion.div
             className="landing-motto stacked-motto"
             initial={{ opacity: 0 }}

@@ -91,6 +91,10 @@
   background-color: #000;
 }
 
+.landing-gift-base.opened::before {
+  display: none;
+}
+
 .landing-bow {
   position: relative;
   top: -100px;
