@@ -122,14 +122,15 @@ export default function Landing() {
           transition: { duration: 1, ease: "easeInOut" },
         });
 
-        await message.start({
-          opacity: 1,
-          transition: { duration: 0.8, ease: "easeInOut" },
-        });
+        // await message.start({
+        //   opacity: 1,
+        //   transition: { duration: 0.8, ease: "easeInOut" },
+        // });
 
         setShowSkip(true);
 
-        await new Promise((resolve) => setTimeout(resolve, 10000));
+        // await new Promise((resolve) => setTimeout(resolve, 10000));
+        await new Promise((resolve) => setTimeout(resolve, 1500));
 
         navigate("/home");
       }, 3200);
